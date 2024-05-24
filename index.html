@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advent1周年-公車計畫</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,16 +26,17 @@
 
     <!--主頁-->
     <section class="home" id="home">
-        <div class="home-text">
+        <div class="home-text"> z
             <h1>Hololive Advent</h1>
             <h2>一周年公車紀念快樂</h2>
         </div>
     </section>
     <!--活動介紹-->
     <section class="description" id="description">
-            <div class="desc">
+            <div class="heading">
                 <h2>活動介紹</h2>
-                <p>這裡是Advnet中文粉絲群團隊，為了慶祝Advent即將到來的一周年，我們將籌募公彩繪 ...</p>
+                <p>這裡是Advnet中文粉絲群團隊，為了慶祝Advent即將到來的一周年<br/>
+                我們將籌募公彩繪 ...</p>
             </div>
             <div class="row">
                 <div class="image">
@@ -47,29 +51,55 @@
     </section>
     <!--成員-->
     <section class="member" id="member">
-        <div class="m-heading">
+        <div class="heading">
             <h2>成員連結</h2>
         </div>
         <div class="member-cards">
             <div class="member-box">
-                <img src="img/Shiori-Novella_pr-img_00.png" alt="" class="idolsStyle">
+                <a href="https://www.youtube.com/channel/UCgnfPPb9JI3e9A4cXHnWbyg">
+                <img src="img/Shiori-Novella_pr-img_03.png" alt="" class="idolsStyle">
+                </a>
                 <p>Shiori Novella</p>
+                <div class="shar">
+                    <a href="https://x.com/ShioriNovella" class="btn-X"><img src="img/X.png" alt=""></a>
+                </div>
             </div>
             <div class="member-box">
-                <img src="img/Nerissa-Ravencroft_pr-img_00.png" alt="" class="idolsStyle">
+                <a href="https://www.youtube.com/channel/UC_sFNM0z0MWm9A6WlKPuMMg">
+                <img src="img/Nerissa-Ravencroft_pr-img_03.png" alt="" class="idolsStyle">
+                </a>
                 <p>Nerissa Ravencroft</p>
+                <div class="shar">
+                    <a href="https://x.com/nerissa_en" class="btn-X"><img src="img/X.png" alt=""></a>
+                </div>
             </div>
             <div class="member-box">
-                <img src="img/Koseki-Bijou_pr-img_00.png" alt="" class="idolsStyle">
+                <a href="https://www.youtube.com/channel/UC9p_lqQ0FEDz327Vgf5JwqA">
+                <img src="img/Koseki-Bijou_pr-img_03.png" alt="" class="idolsStyle">
+                </a>
                 <p>Koseki Bijou</p>
+                <div class="shar">
+                    <a href="https://x.com/KosekiBijoun" class="btn-X"><img src="img/X.png" alt=""></a>
+                </div>
             </div>
             <div class="member-box">
-                <img src="img/Fuwawa-Abyssgard_pr-img_00.png" alt="" class="idolsStyle">
+                <a href="https://www.youtube.com/@FUWAMOCOch">
+                <img src="img/Fuwawa-Abyssgard_pr-img_03.png" alt="" class="idolsStyle">
+                </a>
                 <p>Fuwawa Abyssgard</p>
+                <div class="shar">
+                    <a href="https://x.com/fuwamoco_en" class="btn-X"><img src="img/X.png" alt=""></a>
+                </div>
             </div>
             <div class="member-box">
-                <img src="img/Mococo-Abyssgard_pr-img_00.png" alt="" class="idolsStyle">
+                <a href="https://www.youtube.com/@FUWAMOCOch">
+                <img src="img/Mococo-Abyssgard_pr-img_03.png" alt="" class="idolsStyle">
+                </a>
                 <p>Mococo Abyssgard</p>
+                <div class="shar">
+                    <a href="https://x.com/fuwamoco_en" class="btn-X"><img src="img/X.png" alt=""></a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -78,9 +108,9 @@
             <h2>版權聲明
             </h2>
             <p>此企劃為Discord群組 Advent公車計畫 所有</p>
-            <p>Copyright © 2024 Advent-1周年公車 隱私權政策</p>
+            <p>Copyright © 2024 Advent-1周年公車 <a href="htmls/copyright.html">隱私權政策</a></p>
         </div>
     </section>
-    <script src="js/main.js"></script>
+    <script src="js/fade.js"></script>
 </body>
 </html>

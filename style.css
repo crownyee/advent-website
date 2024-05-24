@@ -62,7 +62,6 @@ header{
     background: var(--text-color);
     padding: 20px 20px;
     border-radius:  2rem;
-
 }
 
 .logo{
@@ -117,29 +116,28 @@ section{
     margin: 1rem 0 1.5rem;
 }
 
-
-/*活動介紹*/
-
-
-.desc{
+.heading{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-.desc  h2{
-    font-size: 2.3rem;
+.heading h2{
+    font-size: 2.2rem;
+    font-family: var(--poppins-font);
     font-weight: 800;
 }
 
-.desc p{
-    max-width: 400px;
+.heading p{
     font-size: 1.14rem;
     font-family: var(--poppins-font);
     margin: 1rem 0 1.5rem;
 }
+
+/*活動介紹*/
+
 
 .row{
     display: flex;
@@ -174,20 +172,6 @@ section{
     background-color: var(--second-color);
 }
 
-.m-heading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.m-heading h2{
-    font-size: 2.2rem;
-    font-family: var(--poppins-font);
-    font-weight: 800;
-}
-
 .member-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(auto,320px));
@@ -196,7 +180,7 @@ section{
 }
 
 .member-box{
-    background: var(--main-color);
+    background: var(--second-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,11 +206,19 @@ section{
 .member-box p{
     max-width: 400px;
     color: var(--text-color);
-    font-size: 1.14rem;
+    font-size: 1.15rem;
     font-family: var(--poppins-font);
-    margin: 1rem 0 1.5rem;
 }
-  
+
+.member-box a{
+    flex-direction: column;
+    font-size: 2.15rem;
+}
+
+.member-box .shar{
+    max-width: 30px;
+}
+
 .idolsStyle {
   transition: transform 0.2s;
 }
@@ -237,8 +229,8 @@ section{
 /*註解區塊*/
 .copyright{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 15rem;
+    margin-bottom: 2rem;
 }
