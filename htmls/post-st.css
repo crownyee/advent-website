@@ -60,9 +60,9 @@ a {
 }
 
 /* Content styles */
-.content {
-    margin-left: 250px; /* 讓主要內容的左側避開導航欄的寬度 */
-    padding: 20px; /* 添加一些内邊距 */
+.main-content {
+    margin-left: 250px; /* 与导航栏宽度一致或更大 */
+    padding: 20px;
 }
 
 .menu-toggle {
@@ -72,12 +72,6 @@ a {
     border: none;
     color: rgb(0, 0, 0); /* 图标颜色 */
 }
-
-.main-content {
-    margin-left: 250px; /* 与导航栏宽度一致或更大 */
-    padding: 20px;
-}
-
 
 /* 在小螢幕上的樣式 */
 @media screen and (max-width: 1000px) {
@@ -98,16 +92,11 @@ a {
     .main-sidebar {
         width: 0; /* 側邊欄寬度設為0 */
         transition: width 0.3s ease; /* 寬度變化的過渡效果 */
-
     }
 
     .main-sidebar nav {
         overflow: hidden; /* 初始狀態下隐藏導航内容 */
         transition: height 0.3s ease; /* 动画效果 */
-    }
-
-    .main-sidebar nav ul {
-        display: none; /* 在導航折叠时隐藏列表 */
     }
 
 
@@ -121,10 +110,6 @@ a {
         background-color:#8d7070; /* 設置背景顏色 */
         overflow: visible;
         z-index: 1001;
-    }
-    
-    .main-sidebar nav.active ul {
-        display: block; /* 在導航展開时显示列表 */
     }
 
     .main-content {
