@@ -11,7 +11,7 @@
 }
 :root{
     --main-color: #cd8b86;
-    --second-color: #df852e;
+    --second-color: #f5eee4;
     --text-color: #060413;
     --container-color: #f8e4be;
     --bg-color: #f9f6f2;
@@ -53,7 +53,7 @@ header{
     left: 0;
     width: 100%;
     z-index: 100;
-
+    
 }
 .nav{
     display: flex;
@@ -119,6 +119,8 @@ section{
 
 
 /*活動介紹*/
+
+
 .desc{
     display: flex;
     flex-direction: column;
@@ -168,6 +170,10 @@ section{
   }
 
 /*成員卡片*/
+.member{
+    background-color: var(--second-color);
+}
+
 .m-heading{
     display: flex;
     flex-direction: column;
@@ -197,6 +203,20 @@ section{
     row-gap: 1rem;
     padding: 35px  20px;
     border-radius: 2rem;
+    opacity: 0; 
+    transform: translateY(-20px);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-out {
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.member-box.fade-in{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .member-box p{
@@ -212,4 +232,13 @@ section{
 }
 .idolsStyle:hover {
   transform: scale(1.5);
+}
+
+/*註解區塊*/
+.copyright{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15rem;
 }

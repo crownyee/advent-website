@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+                entry.target.classList.remove('fade-out');
+            } else {
+                entry.target.classList.remove('fade-in');
+                entry.target.classList.add('fade-out');
             }
         });
     }, { threshold: 0 });
@@ -11,5 +14,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const images = document.querySelectorAll('.row .image img');
     images.forEach(img => {
         observer.observe(img);
+    });
+
+    const memberBoxes = document.querySelectorAll('.member-box');
+    memberBoxes.forEach(box => {
+        observer.observe(box);
     });
 });
