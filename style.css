@@ -10,7 +10,7 @@
     font-family: var(--font-family-2);
 }
 :root{
-    --main-color: #0b9db0;
+    --main-color: #cd8b86;
     --second-color: #df852e;
     --text-color: #060413;
     --container-color: #f8e4be;
@@ -124,13 +124,48 @@ section{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
 }
 
 .desc  h2{
     font-size: 2.3rem;
     font-weight: 800;
 }
+
+.desc p{
+    max-width: 400px;
+    font-size: 1.14rem;
+    font-family: var(--poppins-font);
+    margin: 1rem 0 1.5rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    gap: 2rem;
+}
+.row .image{
+    flex:1 1 45rem;
+}
+
+.row .image img{
+    flex: 1 1 45rem;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    will-change: opacity, transform;
+}
+
+.row .image img.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.row .image img:hover {
+    transform: scale(1.05);
+  }
 
 /*成員卡片*/
 .m-heading{
@@ -143,6 +178,7 @@ section{
 
 .m-heading h2{
     font-size: 2.2rem;
+    font-family: var(--poppins-font);
     font-weight: 800;
 }
 
@@ -162,21 +198,18 @@ section{
     padding: 35px  20px;
     border-radius: 2rem;
 }
+
+.member-box p{
+    max-width: 400px;
+    color: var(--text-color);
+    font-size: 1.14rem;
+    font-family: var(--poppins-font);
+    margin: 1rem 0 1.5rem;
+}
   
 .idolsStyle {
   transition: transform 0.2s;
 }
 .idolsStyle:hover {
   transform: scale(1.5);
-}
-
-a {
-  text-decoration: none;
-}
-
-.navStyle {
-  transition: transform 0.2s;
-}
-.navStyle:hover {
-  transform: scale(1.2);
 }
