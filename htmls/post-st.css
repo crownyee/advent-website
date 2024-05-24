@@ -1,6 +1,146 @@
 
+/* header */
+/* Reset some default styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    font-family: var(--font-family-2);
+}
+
+:root{
+    --second-color: #f5eee4;
+}
+
+body{
+    background:var(--second-color);
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* main-Sidebar styles */
+.main-sidebar {
+    height: 100vh; /* 讓導航欄覆滿整個視窗的高度 */
+    width: 250px; /* 導航欄寬度 */
+    position: fixed; /* 固定位置 */
+    left: 0; /* 貼近左側 */
+    top: 0; /* 貼近頂部 */
+    background-color: var(--second-color); /* 設置背景顏色 */
+    color: white; /* 文本顏色 */
+    border: 1px solid #989090;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-sidebar nav ul li {
+    margin: 10px 0; /* 添加一些間距 */
+}
+
+.main-sidebar nav ul li a {
+    padding: 10px 15px; /* 添加一些内邊距 */
+    display: block; /* 讓連結充滿列表項 */
+    color:rgb(0, 0, 0); /* 連結顏色 */
+    transition: background-color 0.3s; /* 過渡效果 for hover */
+}
+
+.main-sidebar nav ul li a:hover {
+    background-color: #937e7e; /* 鼠標悬停的背景顏色變更 */
+}
+
+/* Content styles */
+.content {
+    margin-left: 250px; /* 讓主要內容的左側避開導航欄的寬度 */
+    padding: 20px; /* 添加一些内邊距 */
+}
+
+.menu-toggle {
+    display: none; /* 預設隐藏按钮 */
+    font-size: 1.5rem; /* 图标大小 */
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0); /* 图标颜色 */
+}
+
+.main-content {
+    margin-left: 250px; /* 与导航栏宽度一致或更大 */
+    padding: 20px;
+}
+
+
+/* 在小螢幕上的樣式 */
+@media screen and (max-width: 1000px) {
+    .menu-toggle {
+        display: block; /* 在小螢幕上顯示漢堡菜單按鈕 */
+        position: absolute;
+        justify-content: center; /* 垂直置中 */
+        align-items: center; /* 水平置中 */
+        top: 10px;
+        left: 10px;
+        z-index: 2; /* 確保按鈕在側邊欄的上方 */
+    }
+
+    .menu-toggle.active {
+        content: '\2715'; /* 叉叉符號 */
+    }
+    
+    .main-sidebar {
+        width: 0; /* 側邊欄寬度設為0 */
+        transition: width 0.3s ease; /* 寬度變化的過渡效果 */
+
+    }
+
+    .main-sidebar nav {
+        overflow: hidden; /* 初始狀態下隐藏導航内容 */
+        transition: height 0.3s ease; /* 动画效果 */
+    }
+
+    .main-sidebar nav ul {
+        display: none; /* 在導航折叠时隐藏列表 */
+    }
+
+
+    .main-sidebar nav.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 垂直置中 */
+        align-items: center; /* 水平置中 */
+        width: 100vh;            /* 覆蓋整個視窗寬度 */
+        height: 50vh;          /* 覆蓋整個視窗高度 */
+        background-color:#8d7070; /* 設置背景顏色 */
+        overflow: visible;
+        z-index: 1001;
+    }
+    
+    .main-sidebar nav.active ul {
+        display: block; /* 在導航展開时显示列表 */
+    }
+
+    .main-content {
+        margin-left: 0; /* 將側邊欄摺疊時內容填滿整個寬度 */
+        transition: margin-left 0.3s; /* 過渡效果讓變化更平滑 */
+    }
+}
+
+
+/* 貼文框和貼文內容 */
+
+
 
 .post-container{
+    border-radius: 1.5rem;
+    flex-direction: column;
     column-count: 3;
     column-gap: 10px;
     margin: 20px;
@@ -11,7 +151,7 @@
     width: 100%;
     margin-bottom: 20px;
     break-inside: avoid;
-    border: 1px solid #ccc;
+    border: 1px solid #989090;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;
