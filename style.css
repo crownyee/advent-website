@@ -6,8 +6,10 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    outline: none; border: none;
     scroll-padding-top: 3rem;
     font-family: var(--font-family-2);
+    transition: .2s linear;
 }
 :root{
     --main-color: #cd8b86;
@@ -15,11 +17,15 @@
     --text-color: #060413;
     --container-color: #f8e4be;
     --bg-color: #f9f6f2;
-    --text-alter-color: #94908e;
+    --text-alter-color: #116e9b;
+    --hover-color:#02a2ff;
     --poppins-font: "Poppins", sans-serif;
     --font-family-2: "Playfair Display", serif;
 }
 
+html{
+    overflow-x: hidden;
+}
 /*主體*/
 body{
     color: var(--text-color);
@@ -59,15 +65,16 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.8);/* 半透明背景，您可根據需要調整 */
     padding: 20px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     border-radius:  2rem;
 }
 
 .logo{
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--container-color);
+    color: var(--text-alter-color);
 }
 
 .navbar{
@@ -84,24 +91,72 @@ header{
 }
 
 .nav-link:hover{
-    color: var(--bg-color);
+    border-bottom:0.1rem solid var(--hover-color);
+    color: var(--hover-color);
     transform: 0.4s all cubic-bezier(0.075,0.80,0.165,1);
 }
 
-section{
-    padding: 3rem 5%;
+#menu-btn{
+    display: none;
 }
 
+@media(max-width: 1000px){
+    html{
+        font-size: 80%;
+
+    }
+    .header{
+        padding: 1.5rem 2rem;
+
+    }
+}
+
+@media(max-width: 1000px){
+    #menu-btn{
+        display: inline;
+        font-size: 25px;
+    }
+
+    .header .nav {
+        position: absolute;
+        top:100%; left:-100%;
+        
+    }
+
+    .header .nav.active{
+        top:100%; left:0%;
+    }
+
+    #home{
+        display: flex;
+        min-height: 80vh;
+        background: url(img/bg-image.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .header .nav-link{
+        color: var(--text-alter-color);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 1.5rem;
+    }
+}
 /*主頁*/
 .home{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
+    min-height:80vh;
+    width: 100%;
+    position: relative;
     background: url(img/bg-image.png) no-repeat;
     background-size: contain;
-    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+    padding-block: 5%;
     background-attachment: fixed;
 }
+
 
 .home-text h1{
     font-size: 3.5rem;
