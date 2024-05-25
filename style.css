@@ -42,9 +42,6 @@ img{
     width: 100%;
 }
 
-section{
-    padding:  3rem 0 2rem;
-}
 
 .container{
     max-width: 1060px;
@@ -127,15 +124,6 @@ header{
         top:100%; left:0%;
     }
 
-    #home{
-        display: flex;
-        width: 100%;
-        min-height: 80vh;
-        background: url(img/bg-image.png);
-        background-size: cover;
-        background-position: right;
-        transform: 0.4s;
-    }
     .header .nav-link{
         color: var(--text-alter-color);
         display: block;
@@ -146,19 +134,14 @@ header{
 }
 
 /*主頁*/
-.home{
-    min-height:80vh;
+.home {
     width: 100%;
     position: relative;
-    background: url(img/bg-image.png) no-repeat;
-    background-size: contain;
     display: flex;
-    justify-content: center;
+    justify-content: center top;
     align-items: center;
     flex-flow: wrap column;
-    padding-block: 5%;
-    background-attachment: fixed;
-}
+  }
 
 
 .home-text h1{
@@ -175,6 +158,7 @@ header{
 }
 
 .heading{
+    padding:  3rem 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
