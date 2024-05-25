@@ -129,10 +129,11 @@ header{
 
     #home{
         display: flex;
+        width: 100%;
         min-height: 80vh;
-        background: url(img/bg-image.png) no-repeat;
+        background: url(img/bg-image.png);
         background-size: cover;
-        background-position: center;
+        background-position: right;
     }
     .header .nav-link{
         color: var(--text-alter-color);
