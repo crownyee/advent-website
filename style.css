@@ -134,6 +134,7 @@ header{
         background: url(img/bg-image.png);
         background-size: cover;
         background-position: right;
+        transform: 0.4s;
     }
     .header .nav-link{
         color: var(--text-alter-color);
@@ -143,6 +144,7 @@ header{
         font-size: 1.5rem;
     }
 }
+
 /*主頁*/
 .home{
     min-height:80vh;
@@ -281,6 +283,14 @@ header{
 .idolsStyle:hover {
   transform: scale(1.5);
 }
+
+@media (max-width: 665px) {
+    .member-cards {
+      justify-content: center; /* 在較小屏幕將元素置中 */
+    }
+
+}
+
 
 /*註解區塊*/
 .copyright{
