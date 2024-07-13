@@ -46,23 +46,16 @@ html{
 body{
     color: var(--text-color);
     background: var(--bg-color);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 a{
     text-decoration: none;
 
-}
-
-img{
-    width: 100%;
-}
-
-
-.container{
-    max-width: 1080px;
-    margin: auto;
-    width: 100%;
 }
 
 /* header */
@@ -79,6 +72,7 @@ img{
 }
 
 .header .navbar a{
+    color: var(--text-alter-color);
     margin: 0.5rem;
     font-size: 1.6rem;
 }
@@ -86,9 +80,6 @@ img{
     color: var(--hover-color);
 }
 
-#menu-btn{
-    display: none;
-}
 
 @media(max-width: 1000px){
     html{
@@ -102,108 +93,18 @@ img{
 
 }
 
-/*
-@media(max-width: 1000px){
-    #menu-btn{
-        display: inline;
-        font-size: 25px;
-    }
-}
-*/
-
-
-.main-content{
-    margin-top: 110px;
+.container {
+    padding-top: 780px;
 }
 
-/* 貼文框和貼文內容 */
-.post-container{
-    border-radius: 1.5rem;
-    flex-direction: column;
-    column-count: 3;
-    column-gap: 10px;
-    margin: 20px;
+.member-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+.member-list li {
+    margin: 10px 0;
+    font-size: 18px;
 }
 
-.post {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 20px;
-    break-inside: avoid;
-    border: 1px solid #989090;
-    border-radius: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #FFFF;
-}
 
-.post-meta {
-    font-size: 12px;
-    color: #666;
-}
-
-.post-text {
-    font-size: 16px;
-    word-wrap: break-word;
-}
-
-p {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 5px), 1fr));
-    grid-gap: 10px;
-}
-
-.post-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.post img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-img {
-    -ms-interpolation-mode: bicubic;
-    border: 0;
-    max-width: 100%;
-    height: auto;
-}
-
-@media (min-width: 768px) {
-    .main-content {
-        margin-top: 120px; /* 平板尺寸的適配 */
-    }
-}
-
-@media (max-width: 767px) {
-    .main-content {
-        margin-top: 150px; /* 手機尺寸的適配 */
-    }
-}
-
-/* 這會在較大的螢幕上添加更多列 */
-@media (min-width: 1024px) {
-    .post-grid {
-      grid-template-columns: repeat(auto-fill, minmax(calc(33% - 10px), 1fr));
-    }
-  }
-  
-@media (max-width: 768px) {
-    .post-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    }
-    .post-container{
-        column-count: 2;
-    }
-}

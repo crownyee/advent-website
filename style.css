@@ -13,10 +13,9 @@
     transition: .2s linear;
 }
 :root{
-    --main-color: #cd8b86;
-    --second-color: #f5eee4;
+    --main-color: #f5eee4;
+    --second-color: #f9f6f2;
     --text-color: #060413;
-    --container-color: #f8e4be;
     --bg-color: #f9f6f2;
     --text-alter-color: #116e9b;
     --hover-color:#02a2ff;
@@ -39,9 +38,6 @@
     background-color: #f5eee4; /* 軌道的背景顏色 */
   }
 
-html{
-    overflow-x: hidden;
-}
 /*主體*/
 body{
     color: var(--text-color);
@@ -60,7 +56,7 @@ img{
 
 
 .container{
-    max-width: 1060px;
+    max-width: 1080px;
     margin: auto;
     width: 100%;
 }
@@ -72,8 +68,8 @@ header{
     left: 0;
     width: 100%;
     z-index: 100;
-    
 }
+
 .nav{
     display: flex;
     justify-content: space-around;
@@ -109,11 +105,17 @@ header{
     transform: 0.4s all cubic-bezier(0.075,0.80,0.165,1);
 }
 
+
+
+.section{
+    margin-bottom: 30px;
+}
+
 #menu-btn{
     display: none;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 768px){
     html{
         font-size: 80%;
 
@@ -124,7 +126,7 @@ header{
     }
 }
 
-@media(max-width: 1000px){
+@media(max-width: 768px){
     #menu-btn{
         display: inline;
         font-size: 25px;
@@ -160,19 +162,6 @@ header{
   }
 
 
-.home-text h1{
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: var(--main-color);
-}
-
-.home-text h2{
-    max-width: 300px;
-    font-size: 1.94rem;
-    font-family: var(--poppins-font);
-    margin: 1rem 0 1.5rem;
-}
-
 .heading{
     padding:  3rem 0 2rem;
     display: flex;
@@ -196,7 +185,9 @@ header{
 
 /*活動介紹*/
 
-
+.description{
+    background: var(--main-color);
+}
 .row{
     display: flex;
     align-items: center;
@@ -204,11 +195,10 @@ header{
     gap: 2rem;
 }
 .row .image{
-    flex:1 1 45rem;
+    flex:1 1 30rem;
 }
 
-.row .image img{
-    flex: 1 1 45rem;
+.row .image img{    
     opacity: 0;
     transform: translateY(20px); 
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -227,7 +217,7 @@ header{
 
 /*成員卡片*/
 .main-member{
-    background-color: var(--second-color);
+    background-color: var(--main-color);
 }
 
 .member-cards{
@@ -238,13 +228,14 @@ header{
 }
 
 .member-box{
-    background: var(--second-color);
+    background: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1rem;
     padding: 35px  20px;
     border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     opacity: 0; 
     transform: translateY(-20px);
     transition: opacity 1s ease-out, transform 2s ease-out;
@@ -284,7 +275,40 @@ header{
   transform: scale(1.5);
 }
 
-@media (max-width: 665px) {
+/*繪師*/
+.artists img{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.artcard {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.circular-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.circular-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.heading .info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+
+@media (max-width: 767px) {
     .member-cards {
       justify-content: center; /* 在較小屏幕將元素置中 */
     }
@@ -294,6 +318,7 @@ header{
 
 /*註解區塊*/
 .copyright{
+    background: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
