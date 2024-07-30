@@ -199,8 +199,15 @@ header{
     flex:1 1 30rem;
 }
 
-.row .bus{
-    flex:1 1 30rem;
+.row .bus {
+    flex: 1 1 30rem;
+    max-width: 100%;
+  }
+  
+.row .bus img {
+    width: 100%;
+    max-height: 30rem;
+    object-fit: contain;
 }
 
 
