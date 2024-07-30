@@ -75,14 +75,18 @@
             </div>
             <div class="row">
                 <div class="bus">
-                    <img src="img/bus1.png" alt="">
+                    <img src="img/bus1.png" alt="Your Image" onclick="openModal(this)">
                 </div>
                 <div class="bus">
-                    <img src="img/bus2.png" alt="">
+                    <img src="img/bus2.png" alt="Your Image" onclick="openModal(this)">
                 </div>
                 <div class="bus">
-                    <img src="img/bus3.png" alt="">
+                    <img src="img/bus3.png" alt="Your Image" onclick="openModal(this)">
                 </div>
+                <div id="modal" class="modal">
+                    <img class="modal-content" id="modal-image">
+                </div>
+            </div>
             <div class="row">
                 <div class="image">
                     <img src="img/" alt="">
@@ -229,5 +233,26 @@
     </section>
     <script src="js/fade.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+        function openModal(bus_) {
+          const modal = document.getElementById("modal");
+          const modalImage = document.getElementById("modal-image");
+    
+          modal.style.display = "flex";
+          modalImage.src = bus_.src;
+        }
+    
+        window.onload = function() {
+          const modal = document.getElementById("modal");
+          modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+          const modal = document.getElementById("modal");
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
 </body>
 </html>
