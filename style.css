@@ -194,9 +194,15 @@ header{
     background-color: var(--bg-color);
     gap: 2rem;
 }
+
 .row .image{
     flex:1 1 30rem;
 }
+
+.row .bus{
+    flex:1 1 30rem;
+}
+
 
 .row .image img{    
     opacity: 0;
@@ -204,6 +210,7 @@ header{
     transition: opacity 1s ease-out, transform 1s ease-out;
     will-change: opacity, transform;
 }
+
 
 .row .image img.fade-in{
     opacity: 1;
